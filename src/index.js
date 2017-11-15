@@ -8,10 +8,8 @@ import apiRoutes from './modules';
 import './config/database';
 
 const app = express();
+app.use(express.static('./dist'));
 middlewaresConfig(app);
-app.get('/', (req, res) => {
-  res.send('Api Normas');
-});
 apiRoutes(app);
 
 app.listen(constants.PORT, err => {

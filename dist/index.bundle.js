@@ -396,10 +396,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const app = (0, _express2.default)(); /* eslint-disable no-console */
 
+app.use(_express2.default.static('./dist'));
 (0, _middlewares2.default)(app);
-app.get('/', (req, res) => {
-  res.send('Api Normas');
-});
 (0, _modules2.default)(app);
 
 app.listen(_constants2.default.PORT, err => {
@@ -681,7 +679,6 @@ var _post2 = _interopRequireDefault(_post);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 async function createPost(req, res) {
-  console.log(req.body);
   try {
     const post = await _post2.default.createPost(req.body, req.user._id);
     return res.status(_httpStatus2.default.CREATED).json(post);
@@ -738,7 +735,7 @@ const PostSchema = new _mongoose.Schema({
     type: String,
     trim: true,
     required: [true, 'Titulo requerido'],
-    minlength: [5, 'Titulo muy corto'],
+    minlength: [3, 'Titulo muy corto'],
     unique: true
   },
   description: {
@@ -868,7 +865,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   createPost: {
     body: {
-      title: _joi2.default.string().min(5).required(),
+      title: _joi2.default.string().min(3).required(),
       description: _joi2.default.string().min(100).required(),
       tipo: _joi2.default.string().required(),
       institucion: _joi2.default.string().required(),
