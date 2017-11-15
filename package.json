@@ -1,0 +1,42 @@
+{
+  "name": "normasapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "CodeXtinction",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -w",
+    "dev": "cross-env NODE_ENV=development nodemon dist/index.bundle.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cross-env": "^5.0.5",
+    "eslint-config-prettier": "^2.6.0",
+    "express": "^4.16.1",
+    "express-validation": "^1.0.2",
+    "helmet": "^3.8.2",
+    "http-status": "^1.0.1",
+    "joi": "^11.3.2",
+    "mongoose": "^4.12.1",
+    "mongoose-unique-validator": "^1.0.6",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "passport-local": "^1.0.0",
+    "slug": "^0.9.1",
+    "validator": "^9.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.8.0",
+    "eslint-config-equimper": "^2.2.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
