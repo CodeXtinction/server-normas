@@ -1,4 +1,4 @@
-import morgan from 'morgan';
+// import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import helmet from 'helmet';
@@ -15,8 +15,8 @@ export default app => {
 
   app.use(bodyParser.json());
   app.use(passport.initialize());
-
+  /*
   if (isDev) {
     app.use(morgan('dev'));
-  }
+  }*/
 };

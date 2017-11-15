@@ -1,5 +1,6 @@
 const devConfig = {
-  MONGO_URL: 'mongodb://localhost/api-normas',
+  MONGO_URL:
+    'MONGOLAB URL HERE',
   JWT_SECRET: 'nnYGq6wPc9cQ8xiVIpiPb06aLVfLuezqZHvgMxjQU9onamtiOi7zu9gjMPahLhi'
 };
 
@@ -8,11 +9,15 @@ const testConfig = {
 };
 
 const prodConfig = {
-  MONGO_URL: 'mongodb://localhost/api-normas'
+  MONGO_URL:
+  'MONGOLAB URL HERE',
+  JWT_SECRET: 'nnYGq6wPc9cQ8xiVIpiPb06aLVfLuezqZHvgMxjQU9onamtiOi7zu9gjMPahLhi'
 };
 
 const defaultConfig = {
-  PORT: process.env.PORT || 3000
+  PORT: process.env.PORT || 3000,
+  MONGO_URL:
+  'MONGOLAB URL HERE'
 };
 
 function envConfig(env) {
